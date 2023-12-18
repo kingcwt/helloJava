@@ -8,8 +8,7 @@ public class Test {
 //        Dog d = new Dog();
 
         Animal an;
-        Dog d = new Dog();
-        an = d;
+        an = new Dog();
         girl.animalShot(an);
     }
 }
