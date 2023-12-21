@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<students>
+    <student id="1">
+        <name>郭章领</name>
+        <age>28</age>
+        <sex>男</sex>
+        <score>80</score>
+    </student>
+    <student id="2">
+        <name>中军</name>
+        <age>26</age>
+        <sex>男</sex>
+        <score>80.5</score>
+    </student>
+</students>
