@@ -1,8 +1,6 @@
 package demo10;
 
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.Socket;
 
 public class TestClient {
@@ -17,6 +15,11 @@ public class TestClient {
         // 传送数据
         dos.writeUTF("你好 服务器，我是客户端");
 
+        // 对服务器端返回的数据处理
+        InputStream is = s.getInputStream();
+        DataInputStream dis = new DataInputStream(is);
+        String str = dis.readUTF();
+        System.out.println("服务器返回的数据是:" + str);
         // 关闭网络资源
         dos.close();
         os.close();

@@ -1,8 +1,6 @@
 package demo10;
 
-import java.io.DataInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -16,7 +14,7 @@ public class TestServer {
 
         // 等待客户端发送数据
         Socket s = ss.accept();
-        // 服务器端感受到的输入流
+        // 服务器端接收到的输入流
         InputStream is = s.getInputStream();
         DataInputStream dis = new DataInputStream(is);
 
@@ -24,6 +22,13 @@ public class TestServer {
         String str = dis.readUTF();
         System.out.println(str);
 
+        // 向客户端发送数据
+        OutputStream os = s.getOutputStream();
+        DataOutputStream dos = new DataOutputStream(os);
+        dos.writeUTF("你好 客户端，我收到你的来信了,我是服务器");
+
+        dos.close();
+        os.close();
         // 关闭网络资源
         dis.close();
         is.close();
