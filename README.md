@@ -83,3 +83,41 @@ public class Person {
 
 `ISO参考模型`
 > 应用层，表示层，会话层，传输层，网络层，数据链路层，物理层
+
+
+
+### mysql
+- 查看数据库
+```mysql
+show databases;
+```
+- 创建表
+```mysql
+create table t_book(id int(11),name varchar(255),author varchar(255),price double);
+```
+
+- 查询表字段
+```mysql
+desc t_book;
+```
+- 查询所有数据
+```mysql
+select * from t_book;
+# 查看部分
+select name,author from b_book;
+```
+
+- 给表增加数据
+```mysql
+insert into t_book (id,name,author,price) values (1,'a','chr',10.0);
+```
+- 删除表中某一条数据
+```mysql
+delete from t_book where id=1;
+```
+
+- 修改表中某一条数据
+```mysql
+update t_book set price=36.6 where id=1;
+```
+
