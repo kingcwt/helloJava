@@ -121,3 +121,10 @@ delete from t_book where id=1;
 update t_book set price=36.6 where id=1;
 ```
 
+### JDBC访问数据库编码步骤
+- 1 加载Driver驱动
+- 2 获取数据库连接
+- 3 创建会话 sql命令发送器
+- 4 通过Statement发送SQL命令并得到结果
+- 5 处理结果
+- 6 关闭数据库资源
